@@ -1,11 +1,12 @@
 ---
 layout: post
-title: Useful aliases and ENVs in cygwin .profile
+title: Useful aliases and ENVs in .profile
 date: 2016-05-11 08:45
 author: isaaclevin
 comments: true
 categories: [Uncategorized]
 ---
+{% highlight bash %}
 alias cp='cp -i'
 alias mv='mv -i'
 alias df='df -h'
@@ -30,4 +31,4 @@ alias mvnAllOff='export MAVEN_OPTS=$MAVEN_OPTS_BASE'
 alias mvnDebugOn='export MAVEN_OPTS=$MAVEN_OPTS_DEBUG'
 
 mvnDebugOn
-
+{% endhighlight %}

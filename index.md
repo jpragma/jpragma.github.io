@@ -15,3 +15,8 @@ Perhaps you already have your internal development team or work with another con
 ### Bootstrap development process
 
 We specialize in setting up highly efficient software development processes and infrastructure. This infrastructure includes CI/CD pipelines, quality gates, testing automation, and reporting.
+
+### Contact Us
+
+[Email](mailto:ilevin@jpragma.com)
+

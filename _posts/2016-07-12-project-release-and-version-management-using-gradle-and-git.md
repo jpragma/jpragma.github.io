@@ -28,7 +28,7 @@ This plugin adds ability to upload project artifacts to nexus repository. Simply
 
 <h3>Example gradle.build</h3>
 
-[sourcecode lang="groovy"]
+{% highlight gradle %}
 buildscript {
     repositories {
         maven {url = 'http://repo1.maven.org/maven2'}
@@ -68,4 +68,4 @@ nexus {
     repositoryUrl = 'http://localhost:8081/nexus/content/repositories/internal/'
     snapshotRepositoryUrl = 'http://localhost:8081/nexus/content/repositories/internal-snapshots/'
 }
-[/sourcecode]
+{% endhighlight %}

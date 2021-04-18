@@ -7,7 +7,7 @@ comments: true
 categories: [Uncategorized]
 ---
 <!-- wp:paragraph -->
-<p>Sometimes I need to add a very simple UI to my Micronaut applications. Lightweight javascript libraries such as JQuery or AngularJS are quite convenient for this purpose. Traditionally CDNs are used to reference and download these libraries at runtime, but I prefer to use webjars. This way my app will continue to work even if there is no internet connection or if certain CDN is blocked by e.g. corporate network policies.</p>
+<p>Sometimes I need to add a very simple UI to my Micronaut applications. Lightweight javascript libraries such as JQuery or AngularJS are quite convenient for this purpose. Traditionally CDNs are used to reference and download these libraries at runtime, but I prefer to use webjars. This way my app will continue to work even if there is no internet connection or if certain CDN is blocked e.g. by corporate network policies.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
