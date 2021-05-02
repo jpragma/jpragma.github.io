@@ -6,33 +6,16 @@ author: isaaclevin
 comments: true
 categories: [Uncategorized]
 ---
-<!-- wp:paragraph -->
-<p>Sometimes I need to add a very simple UI to my Micronaut applications. Lightweight javascript libraries such as JQuery or AngularJS are quite convenient for this purpose. Traditionally CDNs are used to reference and download these libraries at runtime, but I prefer to use webjars. This way my app will continue to work even if there is no internet connection or if certain CDN is blocked e.g. by corporate network policies.</p>
-<!-- /wp:paragraph -->
+Sometimes I need to add a very simple UI to my Micronaut applications. Lightweight javascript libraries such as JQuery or AngularJS are quite convenient for this purpose. Traditionally CDNs are used to reference and download these libraries at runtime, but I prefer to use webjars. This way my app will continue to work even if there is no internet connection or if certain CDN is blocked e.g. by corporate network policies.
 
-<!-- wp:heading -->
-<h2>Step 1</h2>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>Add dependency to the webjar. In gradle this would look like:</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:code -->
+### Step 1
+Add dependency to the webjar. In gradle this would look like:
 {% highlight gradle %}
 runtimeOnly('org.webjars:jquery:3.5.1')
 {% endhighlight %}
-<!-- /wp:code -->
 
-<!-- wp:heading -->
-<h2>Step 2</h2>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>Add following configuration to application.yml</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:code -->
+### Step 2
+Add following configuration to application.yml
 {% highlight yml %}
 micronaut:
   application:
@@ -44,28 +27,14 @@ micronaut:
           - "classpath:public"
           - "classpath:META-INF/resources/webjars"
 {% endhighlight %}
-<!-- /wp:code -->
 
-<!-- wp:heading -->
-<h2>Step 3</h2>
-<!-- /wp:heading -->
+### Step 3
+Create static resources (html, js, css) under *src/main/resources/public*
 
-<!-- wp:paragraph -->
-<p>Create static resources (html, js, css) under <em>src/main/resources/public</em></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading -->
-<h2>Step 4</h2>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>Reference webjar javascript library from html</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:code -->
+### Step 4
+Reference webjar javascript library from html
 {% highlight html %}
 <head>
     <script src="jquery/3.5.1/jquery.min.js"></script>
 </head>
 {% endhighlight %}
-<!-- /wp:code -->

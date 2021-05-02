@@ -24,7 +24,7 @@ Here the steps I followed:
 	<li>create BSF Sampler and specify "groovy" as a scripting language (see screenshot below)</li>
 	<li>type your groovy script and run it</li>
 </ol>
-<img src="http://jpragmainc.files.wordpress.com/2010/02/jmeter-groovy-bsf1.jpg" alt="" title="jmeter-groovy-bsf" width="524" height="285" class="alignnone size-full wp-image-23" />
+![jmeter-groovy-bsf](/assets/jmeter-groovy-bsf1.jpg)
 
 This method is far from being perfect. It actually monitors how much time it takes to execute the script itself, but in most cases you'd like to specify exactly when to start counting execution time [results.sampleStart(); results.samplePause(); results.sampleResume(); results.sampleEnd();]
 I hope Alexandru will make his project available soon, or may be I'll find some time to create more sophisticated JMeter Groovy plug-in.
@@ -57,7 +57,7 @@ public class ThreadLocalStorage {
 
 Just package it as a jar file and put into jmeter/lib directory. Now you can write your scripts like this:
 
-<strong>Connect:</strong>
+**Connect:**
 {% highlight groovy %}
 import com.jpragma.utils.ThreadLocalStorage
 
@@ -72,7 +72,7 @@ ThreadLocalStorage.set('myOutStream', oStream)
 return "success"
 {% endhighlight %}
 
-<strong>Echo Message</strong>
+**Echo Message**
 {% highlight groovy %}
 import com.jpragma.utils.ThreadLocalStorage
 
@@ -94,7 +94,7 @@ else
     return "failure"
 {% endhighlight %}
 
-<strong>Disconnect</strong>
+**Disconnect**
 {% highlight groovy %}
 import com.jpragma.utils.ThreadLocalStorage
 
