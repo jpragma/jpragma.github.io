@@ -14,7 +14,7 @@ To enhance this methodology, we turn to [Instancio](https://www.instancio.org/),
 
 Let's explore a practical example within the context of a cooking app. Consider two services – MealService and ShoppingService. Our test focuses on MealService; we validate that ShoppingService is invoked with a shopping list of essential ingredients.
 
-```mermaid
+{% mermaid %}
 ---
 title: Cooking Domain
 ---
@@ -80,8 +80,8 @@ classDiagram
     Meal o-- Recipe
     Ingredient -- IngredientType
     Recipe *-- Step
-```
-```java
+{% endmermaid %}
+{% highlight java %}
 public class MealServiceTest {
 ShoppingService shoppingService = Mockito.mock(ShoppingService.class);
 MealService mealService = new MealServiceImpl(shoppingService);
@@ -102,7 +102,7 @@ MealService mealService = new MealServiceImpl(shoppingService);
         Mockito.verify(shoppingService).buy(expectedShoppingList);
     }
 }
-```
+{% endhighlight %}
 
 In this example, we've set up a single 'object mother' test data factory class for the entire domain. 
 Its main job is to create and provide named test data builders. Once you have a builder, 
@@ -110,7 +110,7 @@ you can simply invoke the 'build()' method and obtain a fully populated complex 
 Additionally, we offer several convenient customization methods, enabling users to adjust specific values within the created domain object. 
 Internally, these builders leverage the capabilities of Instancio.
 
-```java
+{% highlight java %}
 import org.instancio.GeneratorSpecProvider;
 import org.instancio.Instancio;
 import org.instancio.InstancioApi;
@@ -186,4 +186,4 @@ public class CookingMother {
         }
     }
 }
-```
+{% endhighlight %}
