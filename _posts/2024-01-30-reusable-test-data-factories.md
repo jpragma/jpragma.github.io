@@ -5,6 +5,7 @@ date: 2024-01-30 18:42
 author: isaaclevin
 comments: true
 categories: [Java, Testing]
+mermaid: true
 ---
 Crafting effective tests is as vital as writing clean production code. A well-structured test not only validates functionality but also serves as documentation for the system. However, creating such tests often encounters a common roadblock – the excess baggage of fluff. This includes generating test data, defining parameters for the "system under test," creating responses for mocks/stubs, and establishing expectations for asserts.
 
@@ -14,7 +15,7 @@ To enhance this methodology, we turn to [Instancio](https://www.instancio.org/),
 
 Let's explore a practical example within the context of a cooking app. Consider two services – MealService and ShoppingService. Our test focuses on MealService; we validate that ShoppingService is invoked with a shopping list of essential ingredients.
 
-{% mermaid %}
+<div class="mermaid">
 ---
 title: Cooking Domain
 ---
@@ -30,7 +31,7 @@ classDiagram
         items: String[]
     }
     class MealType {
-        <<enum>>
+        &lt;&lt;enum&gt;&gt;
         BREAKFAST
         LUNCH
         DINNER
@@ -39,7 +40,7 @@ classDiagram
     }
 
     class IngredientType {
-        <<enum>>
+        &lt;&lt;enum&gt;&gt;
         VEGETABLE
         FRUIT
         PROTEIN
@@ -62,14 +63,14 @@ classDiagram
     }
 
     class Recipe {
-        steps: List<Step>
+        steps: List&lt;Step&gt;
         getDuration(): Duration
     }
 
     class Meal {
         name: String
         mealType: MealType
-        ingredients: List<Ingredient>
+        ingredients: List&lt;Ingredient&gt;
         recipe: Recipe
     }
 
@@ -80,7 +81,8 @@ classDiagram
     Meal o-- Recipe
     Ingredient -- IngredientType
     Recipe *-- Step
-{% endmermaid %}
+    
+</div>
 {% highlight java %}
 public class MealServiceTest {
 ShoppingService shoppingService = Mockito.mock(ShoppingService.class);
