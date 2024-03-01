@@ -6,7 +6,9 @@ author: isaaclevin
 comments: true
 categories: [Uncategorized]
 ---
-Sometimes I need to add a very simple UI to my Micronaut applications. Lightweight javascript libraries such as JQuery or AngularJS are quite convenient for this purpose. Traditionally CDNs are used to reference and download these libraries at runtime, but I prefer to use webjars. This way my app will continue to work even if there is no internet connection or if certain CDN is blocked e.g. by corporate network policies.
+Sometimes I need to add a very simple UI to my Micronaut applications. Lightweight javascript libraries such as JQuery or AngularJS are quite convenient for this purpose. 
+Traditionally, CDNs are used to reference and download these libraries at runtime, but I prefer to use webjars. 
+This way, my app will continue to work even if there is no internet connection or if a certain CDN is blocked e.g. by corporate network policies.
 
 ### Step 1
 Add dependency to the webjar. In gradle this would look like:
